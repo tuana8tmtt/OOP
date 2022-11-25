@@ -1,4 +1,4 @@
-package aims;
+package hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
     private static int nbDigitalVideoDisc = 0;
@@ -14,10 +14,12 @@ public class DigitalVideoDisc {
     private float cost;
 
     public DigitalVideoDisc() {
-
+        nbDigitalVideoDisc++;
+        this.id = nbDigitalVideoDisc;
     }
 
     public DigitalVideoDisc(String title){
+        this();
         this.title = title;
     }
 
@@ -39,11 +41,6 @@ public class DigitalVideoDisc {
 
     public int getId() {
         return id;
-    }
-
-    public void setId() {
-        nbDigitalVideoDisc++;
-        this.id = nbDigitalVideoDisc;
     }
     public String getTitle() {
         return title;
